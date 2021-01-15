@@ -1,0 +1,182 @@
+@import "vars";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Roboto", "Noto Sans KR";
+    font-size: 1.6rem;
+    min-height: 5000px;
+}
+
+.txtBox {
+    font-size: 4.8rem;
+    line-height: 1.5;
+
+    &.red {
+        color: $main-color;
+    }
+
+    &.bold {
+        font-weight: 500;
+    }
+}
+
+.container {
+    width:1200px;
+    margin: auto;
+}
+#header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding: 0 100px;
+    justify-content: space-between;
+    align-items: center;
+
+    #logo {
+        font-size: 24px;
+        font-weight: 700;
+
+        a {
+            display: block;
+            padding: 50px 0;
+        }
+    }
+
+    .btnAll {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #111;
+
+            &:nth-child(2) {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+#main {
+    #mainVisual {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title {
+            font-size: 4vw;
+            font-weight: 100;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: rgba(184, 1, 1, 0.8);
+            font-family: "Poppins";
+            text-transform: uppercase;
+            .word03 {
+                font-weight: 700;
+            }
+
+        }
+        .prince {
+            @include absCenter();
+            top: 55%;
+            z-index: -1;
+            img {
+                width: 35vw;
+            }
+        }
+    }
+    .contentsBox {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        .title {
+            word-break: keep-all;
+            font-weight: 100;
+            strong {
+                font-weight: 500;
+            }
+        }
+        .contents {
+            margin-top: 200px;
+            display: flex;
+            .face {
+                width:300px;
+                img {
+                    width:100%;
+                }
+            }
+            .info {
+                font-size: 24px;
+                padding-left: 100px;
+            }
+        }
+    }
+    #works {
+        .contents {
+            width:100%;
+            .info {
+                position: absolute;
+                width:100%;
+                left:0;
+                overflow: hidden;
+                padding-left: 300px;
+            }
+        }
+        ul {
+            width:100%;
+            li {
+                width:auto;
+                filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.1));
+                text-align: center;
+            }
+        }
+    }
+}
+.numberBox {
+    .container {
+        display: flex;
+    }
+    .no {
+        display: block;
+        width:200px;
+        font-size: 2rem;
+        font-weight: 700;
+        position: relative;
+        padding-top: 10px;
+        color:$main-color;
+    }
+    .txtBox {
+        flex: 1;
+        font-size: 2.8rem;
+        font-weight: 100;
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+#wave{
+    height: 100vh;
+    .no {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left:30px;
+            right:20px;
+            height: 1px;
+            top:20px;
+            transform-origin: 0 50%;
+            background-color: $main-color;
+        }
+    }
+} 
